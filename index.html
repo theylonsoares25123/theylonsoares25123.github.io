@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página Responsiva</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <header>
+        <img src="foto_primeira.svg" alt="Imagem no topo" class="top-image">
+    </header>
+    <main>
+        <section id="video-section" class="block">
+            <video autoplay muted loop class="background-video">
+                <source src="video_teste_politico.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+        </section>
+        <section id="vote-section" class="block">
+            <h1>Apoiadores em tempo real</h1>
+            <p id="supporters-count">0</p>
+            <button id="google-login-button">Login com Google</button>
+            <button id="support-button" style="display: none;">Eu apoio</button>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-block">
+            <h2>Minhas Propostas</h2>
+            <p>Detalhes das propostas...</p>
+        </div>
+        <div class="footer-block">
+            <h2>Minhas Redes Sociais</h2>
+            <p>Links para redes sociais...</p>
+            <h2>Contato</h2>
+            <p>Telefone: (xx) xxxx-xxxx</p>
+        </div>
+    </footer>
+</body>
+</html>
