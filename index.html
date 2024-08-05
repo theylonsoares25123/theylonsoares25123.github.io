@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Página Responsiva</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
-    <script defer src="app.js"></script>
+    <script type="module" src="app.js" defer></script>
 </head>
 <body>
     <header>
@@ -22,10 +19,14 @@
             </video>
         </section>
         <section id="vote-section" class="block">
-            <h1>Apoiadores em tempo real</h1>
+            <h1 class="blue-text">Apoiadores em tempo real</h1>
             <p id="supporters-count">0</p>
-            <button id="google-login-button">Login com Google</button>
-            <button id="support-button" style="display: none;">Eu apoio</button>
+            <form id="support-form" action="https://api.sheetmonkey.io/form/9uiwfDSMKPWwF6ZqTA2dpM" method="POST">
+                <input type="text" id="Nome" name="Nome" placeholder="Nome" required>
+                <input type="text" id="Bairro" name="Bairro" placeholder="Bairro" required>
+                <input type="text" id="Contato" name="Contato" placeholder="Contato" required>
+                <button type="submit">Declarar meu apoio</button>
+            </form>
         </section>
     </main>
     <footer>
