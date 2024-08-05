@@ -1,91 +1,45 @@
-/* styles.css */
-body, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-header, main, footer {
-    width: 100%;
-}
-
-header {
-    height: 40vh; /* Altura padrão */
-    overflow: hidden;
-}
-
-.top-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajuste conforme necessário */
-}
-
-/* Estilos para dispositivos maiores (desktop) */
-@media (min-width: 1024px) {
-    header {
-        height: 30vh; /* Altura ajustada para desktop */
-    }
-}
-
-.block {
-    position: relative;
-    padding: 20px;
-    text-align: center;
-    color: white;
-}
-
-#video-section {
-    position: relative;
-    background: url(Design\ sem\ nome\ \(6\).png) no-repeat center center/cover; /* Imagem de fundo */
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Garante que o conteúdo não saia do bloco */
-}
-
-.background-video {
-    width: 80%; /* Ajuste o tamanho conforme necessário */
-    max-width: 600px; /* Limita o tamanho máximo do vídeo */
-    height: auto;
-    position: relative;
-    z-index: 1; /* Certifica-se de que o vídeo está acima da imagem de fundo */
-}
-
-#vote-section {
-    background: url(FOTO_SEGUNDA.png) no-repeat center center/cover;
-    height: 30vh;
-}
-
-footer {
-    display: flex;
-    justify-content: space-around;
-    background: linear-gradient(to top, #003366, #0069df); /* Gradiente de azul escuro para a cor atual */
-    color: white;
-    padding: 20px 0;
-}
-
-.footer-block {
-    width: 45%;
-}
-
-@media (max-width: 768px) {
-    header {
-        height: 30vh;
-    }
-
-    #video-section, #vote-section {
-        height: 40vh;
-    }
-
-    footer {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-block {
-        width: 80%;
-        margin-bottom: 20px;
-    }
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página Responsiva</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="app.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="foto_primeira.png" alt="Imagem no topo" class="top-image">
+    </header>
+    <main>
+        <section id="video-section" class="block">
+            <video autoplay muted loop class="background-video">
+                <source src="video_teste_politico.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+        </section>
+        <section id="vote-section" class="block">
+            <h1 class="blue-text">Apoiadores em tempo real</h1>
+            <p id="supporters-count">0</p>
+            <form id="support-form" action="https://api.sheetmonkey.io/form/9uiwfDSMKPWwF6ZqTA2dpM" method="POST">
+                <input type="text" id="Nome" name="Nome" placeholder="Nome" required>
+                <input type="text" id="Bairro" name="Bairro" placeholder="Bairro" required>
+                <input type="text" id="Contato" name="Contato" placeholder="Contato" required>
+                <button type="submit">Declarar meu apoio</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-block">
+            <h2>Minhas Propostas</h2>
+            <p>Detalhes das propostas...</p>
+        </div>
+        <div class="footer-block">
+            <h2>Minhas Redes Sociais</h2>
+            <p>Links para redes sociais...</p>
+            <h2>Contato</h2>
+            <p>Telefone: (xx) xxxx-xxxx</p>
+        </div>
+    </footer>
+</body>
+</html>
