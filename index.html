@@ -1,44 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Página Responsiva</title>
-    <link rel="stylesheet" href="styles.css">
-    <script type="module" src="app.js" defer></script>
+   
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Declarar Apoio!</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">
+        <script type="module" src="app.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link id="favicon" rel="icon" href="favicon.png" type="image/x-icon"> <!-- Adicione esta linha -->
+    
+    
 </head>
 <body>
     <header>
-        <img src="foto_primeira.png" alt="Imagem no topo" class="top-image">
+        <img src="img_primeira.png" alt="Imagem no topo" class="top-image">
     </header>
     <main>
         <section id="video-section" class="block">
-            <video autoplay muted loop class="background-video">
-                <source src="video_teste_politico.mp4" type="video/mp4">
+            <video autoplay muted loop playsinline class="background-video">
+                <source id="video" src="video_teste_politico.mp4" type="video/mp4">
                 Seu navegador não suporta o elemento de vídeo.
             </video>
         </section>
         <section id="vote-section" class="block">
-            <h1 class="blue-text">Apoiadores em tempo real</h1>
-            <p id="supporters-count">0</p>
+            <h1 class="blue-text">_</h1>
+            <p id="supporters-count">( 2.075 Pessoas ) <i class="fas fa-spinner fa-spin" id="loading-icon"></i></p>
             <form id="support-form" action="https://api.sheetmonkey.io/form/9uiwfDSMKPWwF6ZqTA2dpM" method="POST">
                 <input type="text" id="Nome" name="Nome" placeholder="Nome" required>
                 <input type="text" id="Bairro" name="Bairro" placeholder="Bairro" required>
                 <input type="text" id="Contato" name="Contato" placeholder="Contato" required>
-                <button type="submit">Declarar meu apoio</button>
+                <button type="submit" id="declarar_apoio">Declarar meu apoio a Theylon Soares!</button>
             </form>
         </section>
+        
     </main>
     <footer>
         <div class="footer-block">
-            <h2>Minhas Propostas</h2>
-            <p>Detalhes das propostas...</p>
+            <h2><a href="https://theylonsoares.github.io/#" target="_blank" id="_blank">Minhas Propostas</a></h2>
+            <p><a href="https://theylonsoares.github.io/#" target="_blank">Objetivos de campanha</a></p>
         </div>
-        <div class="footer-block">
-            <h2>Minhas Redes Sociais</h2>
-            <p>Links para redes sociais...</p>
-            <h2>Contato</h2>
-            <p>Telefone: (xx) xxxx-xxxx</p>
+    
+        <div class="footer-block2">
+            <h2><a href="https://meuairgo.com.br/theylonsoares" target="_blank" id="_blank">Contatos</a></h2>
+            <p><a href="https://meuairgo.com.br/theylonsoares" target="_blank">Listas de Contatos</a></p>
+
+            <div class="base_footer">
+        <div class="footer-block3">   
+            <h2 id="reflexao">Reflexão:</h2>
+            <p>Deus transborda o cálice das impossibilidades</p>
+            </div>
+            </div>
         </div>
     </footer>
 </body>
