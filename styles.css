@@ -56,7 +56,7 @@ header {
     height: 45vh;
 }
 #declarar_apoio{
-    margin-top: 1%;
+    margin-top: 2%;
 }
 
 form {
@@ -219,4 +219,7 @@ footer {
         margin-left: 10px; /* Espaço à esquerda do ícone */
     }
     
+    #declarar_apoio{
+        margin-top: 3%;
+    }
 }
