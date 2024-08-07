@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const supportersCountElement = document.getElementById('supporters-count');
-    const loadingIcon = document.getElementById('loading-icon');
+    const supportersTextElement = document.getElementById('supporters-text');
+    const loadingIconElement = document.getElementById('loading-icon');
     const apiURL = 'https://api.sheetmonkey.io/form/9uiwfDSMKPWwF6ZqTA2dpM';
 
     const fetchSheetData = async () => {
@@ -30,15 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const count = await fetchSheetData();
             if (count === 'Erro ao carregar') {
-                supportersCountElement.textContent = count;
+                supportersTextElement.textContent = count;
             } else {
-                supportersCountElement.textContent = `${count} Pessoas`;
+                supportersTextElement.textContent = `${count} Pessoas`;
             }
         } catch (error) {
-            supportersCountElement.textContent = 'Erro ao carregar';
+            supportersTextElement.textContent = 'Erro ao carregar';
             console.error('Erro ao atualizar a contagem de apoiadores:', error);
         } finally {
-            loadingIcon.style.display = "none";
+            loadingIconElement.style.display = "none";
         }
     };
 
