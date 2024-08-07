@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const supportersCount = document.getElementById('supporters-count');
-    
+    const loadingIcon = document.getElementById('loading-icon');
+
     // URL da API do SheetMonkey
     const apiURL = 'https://api.sheetmonkey.io/form/9uiwfDSMKPWwF6ZqTA2dpM';
 
@@ -17,8 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Atualizar a contagem inicial de apoiadores
     const updateSupportersCount = async () => {
+        loadingIcon.style.display = 'inline-block'; // Mostrar ícone de carregamento
         const count = await fetchSheetData();
-        supportersCount.textContent = count;
+        supportersCount.textContent = `( ${count} Pessoas )`;
+        loadingIcon.style.display = 'none'; // Ocultar ícone de carregamento
     };
 
     // Chama a função para atualizar a contagem inicial
