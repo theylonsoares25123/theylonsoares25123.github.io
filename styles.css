@@ -28,9 +28,14 @@ header {
     color: white;
 }
 
+.background-video {
+    border: 5px solid #ffce3b; /* Borda amarela com espessura de 5px */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra esfumada */
+}
+
 #video-section {
+    margin-top: 2%;
     position: relative;
-    background: url(Design\ sem\ nome\ \(6\).png) no-repeat center center/cover; /* Imagem de fundo */
     height: 30vh;
     display: flex;
     justify-content: center;
@@ -47,8 +52,11 @@ header {
 }
 
 #vote-section {
-    background: url(FOTO_SEGUNDA.png) no-repeat center center/cover;
-    height: 30vh;
+    background: url(img_terceira.png) no-repeat center center/cover;
+    height: 40vh;
+}
+#declarar_apoio{
+    margin-top: 1%;
 }
 
 form {
@@ -70,7 +78,7 @@ input[type="text"] {
 button[type="submit"] {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #0069df;
+    background-color: #13ab25;
     color: white;
     border: none;
     border-radius: 5px;
@@ -84,18 +92,81 @@ button[type="submit"]:hover {
 footer {
     display: flex;
     justify-content: space-around;
-    background: linear-gradient(to top, #003366, #0069df); /* Gradiente de azul escuro para a cor atual */
+    background: linear-gradient(to top, #003366, #3e72a6); /* Gradiente de azul escuro para a cor atual */
     color: white;
     padding: 20px 0;
 }
 
-.footer-block {
-    width: 45%;
+.footer-block{
+    margin-bottom: -50px;
+}
+
+.footer-block h2 {
+    margin-bottom: 5px; /* Ajusta o espaço abaixo do h2 */
+}
+.footer-block p {
+    margin-top: 5px; /* Ajusta o espaço acima do p */
+}
+.footer-block a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-block2 h2 {
+    margin-top: 15px; /* Ajusta o espaço abaixo do h2 */
+}
+.footer-block2 p {
+    margin-top: -15px; /* Ajusta o espaço acima do p */
+}
+.footer-block2 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-block3 h2 {
+    font-family: "Oswald", sans-serif;
+    margin-top: 10px; /* Ajusta o espaço abaixo do h2 */
+}
+.footer-block3 p {
+    color: #ffffff;
+    font-family: "Oswald", sans-serif;
+    margin-top: -12px; /* Ajusta o espaço acima do p */
+}
+#reflexao {
+    color: #ffce3b;
+    font-size: 100%;
 }
 
 .blue-text {
-    color: blue;
+    visibility: hidden;
+    color: rgb(255, 255, 255);
 }
+
+
+
+
+#_blank {
+    color: #ffce3b;
+}
+/* iconeeeeee*/
+#supporters-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#supporters-count {
+    font-size: 130%;
+    color: #13ab25;
+    font-family: "Oswald", sans-serif;
+    margin: 0; /* Remove a margem padrão */
+}
+
+#loading-icon {
+    font-size: 1em; /* Tamanho do ícone igual ao tamanho da fonte */
+    margin-left: 10px; /* Espaço à esquerda do ícone */
+}
+
 
 
 
@@ -113,12 +184,27 @@ footer {
         align-items: center;
     }
 
-    .footer-block {
+    .footer-block, .footer-block2, .footer-block3 {
         width: 80%;
         margin-bottom: 20px;
     }
 
+    .footer-block3 {
+        text-align: center;
+    }
+
+    .base_footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     input[type="text"], button[type="submit"] {
         width: 90%;
+    }
+
+    #video-section {
+        margin-top: 0%;
+        background: url(img_segunda.png) no-repeat center center/cover; /* Imagem de fundo */
     }
 }
