@@ -20,22 +20,20 @@
         <img src="img_primeira.png" alt="Imagem no topo" class="top-image">
     </header>
     <main>
-        <section id="video-section" class="block">
-            <video autoplay muted loop playsinline class="background-video">
-                <source id="video" src="video_teste_politico.mp4" type="video/mp4">
-                Seu navegador não suporta o elemento de vídeo.
-            </video>
-        </section>
         <section id="vote-section" class="block">
             <h1 class="blue-text">_</h1>
-            <p id="supporters-count"> 2.075 Pessoas <i class="fas fa-spinner fa-spin" id="loading-icon"></i></p>
+            <p id="supporters-count">
+                <span id="supporters-text">2.075 Pessoas</span>
+                <span id="loading-icon"><i class="fas fa-spinner fa-spin"></i></span>
+            </p>
             <form id="support-form" action="https://api.sheetmonkey.io/form/9uiwfDSMKPWwF6ZqTA2dpM" method="POST">
                 <input type="text" id="Nome" name="Nome" placeholder="Nome" required>
                 <input type="text" id="Bairro" name="Bairro" placeholder="Bairro" required>
                 <input type="text" id="Contato" name="Contato" placeholder="Contato" required>
-                <button type="submit" id="declarar_apoio">Declarar meu apoio a Theylon Soares!</button>
+                <button type="submit" id="declarar_apoio">Declarar meu apoio a <br>Theylon Soares!</button>
             </form>
         </section>
+        
         
     </main>
     <footer>
