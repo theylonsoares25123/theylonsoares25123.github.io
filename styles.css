@@ -53,7 +53,7 @@ header {
 
 #vote-section {
     background: url(img_terceira.png) no-repeat center center/cover;
-    height: 40vh;
+    height: 45vh;
 }
 #declarar_apoio{
     margin-top: 1%;
@@ -176,7 +176,7 @@ footer {
     }
 
     #video-section, #vote-section {
-        height: 40vh;
+        height: 50vh;
     }
 
     footer {
@@ -207,4 +207,16 @@ footer {
         margin-top: 0%;
         background: url(img_segunda.png) no-repeat center center/cover; /* Imagem de fundo */
     }
+    #supporters-count {
+        font-size: 130%;
+        color: #13ab25;
+        font-family: "Oswald", sans-serif;
+        margin: 0; /* Remove a margem padrão */
+    }
+    
+    #loading-icon {
+        font-size: 1em; /* Tamanho do ícone igual ao tamanho da fonte */
+        margin-left: 10px; /* Espaço à esquerda do ícone */
+    }
+    
 }
