@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const supportersCount = document.getElementById('supporters-count');
+    const supportersCountElement = document.getElementById('supporters-count');
+    const loadingIcon = document.getElementById('loading-icon');
     const apiURL = 'https://api.sheetmonkey.io/form/9uiwfDSMKPWwF6ZqTA2dpM';
 
     const fetchSheetData = async () => {
@@ -18,7 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const updateSupportersCount = async () => {
         const count = await fetchSheetData();
-        supportersCount.textContent = `(${count} Pessoas)`;
+        if (count === 'Erro ao carregar') {
+            supportersCountElement.textContent = count;
+        } else {
+            supportersCountElement.textContent = `${count} Pessoas`;
+        }
+        loadingIcon.style.display = "none";
     };
 
     updateSupportersCount();
