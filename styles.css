@@ -56,7 +56,7 @@ header {
     height: 45vh;
 }
 #declarar_apoio{
-    color: #13ab25;
+   
     margin-top: 2%;
 }
 
@@ -233,7 +233,6 @@ footer {
     
     #declarar_apoio{
         margin-top: 3%;
-         color: #13ab25;
-
+        
     }
 }
