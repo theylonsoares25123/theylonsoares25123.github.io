@@ -179,6 +179,9 @@ footer {
     color: #13ab25;
 }
 
+#support-form{
+    margin-top: 0%;
+}
 
 
 @keyframes spin {
@@ -191,6 +194,10 @@ footer {
     header {
         height: 30vh;
     }
+    #support-form{
+        margin-top: 20%;
+    }
+    
 
     #video-section, #vote-section {
         height: 50vh;
