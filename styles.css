@@ -169,9 +169,14 @@ footer {
     animation: spin 1s linear infinite;
 }
 #supporters-text {
+    margin-top: 4%;
     font-family: "Oswald", sans-serif;
     color: #13ab25;
     margin-right: 10px; /* Espaçamento entre o texto e o ícone */
+}
+.blue-text1{
+    margin-top: 20%;
+    color: #13ab25;
 }
 
 
